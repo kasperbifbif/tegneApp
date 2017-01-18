@@ -13,7 +13,7 @@
         PhoneGap Team , anvendt af Kasper Jakobsen
     </author>
 
-    <content src="tegneApp.html" />
+    <content src="index.html" />
 
     
 	<preference name="DisallowOverscroll" value="true" />
