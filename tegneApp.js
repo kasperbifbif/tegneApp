@@ -1,75 +1,36 @@
-//var canvas;
-var ctx;
-//var xgl;
-//var ygl;
-//var colours = ['red', 'green', 'blue', 'yellow', 'black'];
 
+var ctx;
 
 function init(){
 	var touchzone = document.getElementById("myCanvas");
 	touchzone.addEventListener("touchmove", opdaterCanvas, false);
 	touchzone.addEventListener("touchend", end, false);
 	ctx = touchzone.getContext("2d");
-	myCanvas.width = myCanvas.width;
+	ctx.canvas.width = window.innerWidth-18;
+	ctx.canvas.height = window.innerHeight-100;
 	ctx.fillStyle="white";
-	//ctx.fillRect(0,0,myCanvas.width,myCanvas.height);
 	ctx.lineCap="round";
 	ctx.lineJoin="round";
+	var sliderzone = document.getElementById("range");
+	sliderzone.addEventListener("touchend",slider);
 }
 
 function end(e){
-	e.preventDefault();
-	if (lastPt=null);
-			ctx.beginPath();
-			ctx.moveTo(lastPt.x, lastPt.y);
-			ctx.lineTo(e.touches[0].pageX, e.touches[0].pageY);
-			ctx.stroke();
-			//ctx.strokeStyle = colours[id];
+	ctx.beginPath();
+	ctx.stroke();
 }
-lastPt = {x:e.touches[0].pageX, y:e.touches[0].pageY};
-	
-
 
 function opdaterCanvas(){
 	var pas = document.getElementById("color").value;
-		//ctx.moveTo(event.touches[0].pageX, event.touches[0].pageY);
-		ctx.lineTo(event.touches[0].pageX, event.touches[0].pageY);
-		//ctx.moveTo(150,150);
-		//ctx.lineTo(100,100);
-		ctx.stroke();
-		ctx.lineWidth = document.getElementById("bredde").value;
-		ctx.strokeStyle = pas;
+	ctx.lineTo(event.touches[0].pageX, event.touches[0].pageY);
+	//ctx.moveTo(150,150);
+	ctx.lineWidth = document.getElementById("bredde").value;
+	ctx.stroke();
+	ctx.strokeStyle = pas;
 } 
 
-
-
-//function red(){
-//	var n = document.getElementById("color").value = 1;
-//}
-
-
-//function farve(){
-//	ctx.strokeStyle = '#0000ff';
-//	ctx.stroke();
-//}
-
-//function farve(){
-//	var blue = document.getElementById()
-//	var red = 
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function slider(){
+	var x = document.getElementById("range").value;
+    document.getElementById("bredde").value = x;
+}
 
