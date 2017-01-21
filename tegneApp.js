@@ -1,4 +1,3 @@
-
 var ctx;
 
 function init(){
@@ -23,7 +22,6 @@ function end(e){
 function opdaterCanvas(){
 	var pas = document.getElementById("color").value;
 	ctx.lineTo(event.touches[0].pageX, event.touches[0].pageY);
-	//ctx.moveTo(150,150);
 	ctx.lineWidth = document.getElementById("bredde").value;
 	ctx.stroke();
 	ctx.strokeStyle = pas;

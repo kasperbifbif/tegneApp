@@ -2,28 +2,24 @@
 <html>
 
 	<head>
-
 		<title>touch app</title>
 		<script type="text/javascript" src="tegneApp.js"></script>
 		<meta http-equiv="content type" content="text/html; charset=UFT-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		
 	</head>
 
 	<body onload = "init()">
-		
-		<canvas id="myCanvas" style="border:1px solid #000000;"> </canvas>
-	
+		<!--kassen man tegner i-->
+		<canvas id="myCanvas" style="border:1px solid #000000;"> </canvas>	
 	</br>
-
+		<!--breden på linjen man tegner-->
 		Bredde: <input id="bredde" size="1">
-		<input type="range" id="range"/>
-			
+		<!--en slider der kan ændre bredden-->
+		<input type="range" id="range"/>	
 	</br>
 	</br>	
-		
+		<!--input til farve på linjen-->
 		Farve: <input id="color"/>
-
 	</body>
-
+	
 </html>
